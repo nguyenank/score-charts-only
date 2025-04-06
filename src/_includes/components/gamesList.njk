@@ -1,0 +1,20 @@
+<ul class="article__list">
+  {% for game in games %}
+    {% set gameObj = game.data.gameObj %}
+    <li class="article__item">
+      <article class="article-preview">
+        <h2>
+          {{ gameObj.awayTeam }}
+          {{ gameObj.awayScore }}-{{ gameObj.homeScore }}
+          {{ gameObj.homeTeam }} (<time>{{ gameObj.date }}</time>)
+        </h2>
+        <small class="small-tag-list">
+          {% for tag in gameObj | getTags %}
+            <a class="tag" href="/{{ tag | strToSlug }}">{{ tag }}</a>
+          {% endfor %}
+        </small>
+        <a href="{{ game.url | url }}">{{ game.data.preview | safe }}</a>
+      </article>
+    </li>
+  {% endfor %}
+</ul></li>

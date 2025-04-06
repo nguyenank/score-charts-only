@@ -1,0 +1,53 @@
+---
+layout: page
+title: "xG Model"
+eleventyNavigation:
+    key: xG Model
+    order: 2
+---
+
+<h1>{{ title }}</h1>
+<p>
+    Let me be clear - this is a Form over Function operation. So I wanted the easiest xG model I could possibly get my hands
+    on. And I remembered making one for an old experimental viz, so I just stole that one. What follows are notes about why
+    the model looks as it does, to the best of my memory/recreation now, because I made it apparently in December 2024 and
+    it is currently April 2025 and I left the sum total of half a comment about what I was doing entirely in section
+    headers.</p>
+<h2>
+    The Approach
+</h2>
+<p>
+    I knew I wanted to make the viz in R, because that's how I tend to make all of my static data visualizations.
+</p>
+<p>I've heard from all sorts of places that the most important thing in xG by a good distance (like
+                70%<sup>
+        <a href="#footnote-1" id="footnote-marker-1">a</a>
+    </sup>
+    of it) is distance from the shot to the goal, and another good chunk (like 10%<sup>
+        <a href="#footnote-2" id="footnote-marker-2">b</a>
+    </sup>
+    of it) is the angle, and the rest of the variable are fighting for scraps of percentage points that matter when you aim
+    for things like "performance differentation" and "accurate game prediction" and "rigor." I'm not aiming for any of that,
+    so. Who needs more than two variables anyways.
+</p>
+<p>
+    For model, well, I've heard "xGBoost go brrrrrr" and I've never had
+    <s>a great</s>
+    any opportunity to try it.
+</p>
+<p>
+    And hey, that's pretty much a whole approach right there! Easy.
+</p>
+<h2>
+    The Data
+</h2>
+COMING AT SOME POINT PROBABLY <hr/>
+<p>
+    <div>
+        <a id="footnote-1" href="#footnote-marker-1">a</a>: I made this number up.
+    </div>
+    <div>
+        <a id="footnote-2" href="#footnote-marker-2">b:</a>
+        This one too.
+    </div>
+</p>

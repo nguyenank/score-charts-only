@@ -1,0 +1,10 @@
+{% set socialImage = [metadata.url, metadata.image] | join %}
+{% set title = "Eleventy Not So Minimal Blog Starter" %}
+<meta name="description" content="{{ metadata.description }}"/>
+<meta name="author" content="{{ metadata.author.name }}"/>
+<meta name="generator" content="{{ eleventy.generator }}"/>
+<meta property="og:title" content="{{ title }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content=""/>
+<meta property="og:description" content="{{ metadata.description }}"/>
+<meta property="og:image" content="{{ socialImage }}"/>

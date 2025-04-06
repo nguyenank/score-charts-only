@@ -1,0 +1,19 @@
+---
+layout: page
+tags: game
+---
+
+<article class="article">
+    <h1>
+        {{ gameObj.homeTeam }}
+        {{ gameObj.homeScore }} - {{ gameObj.awayScore }}
+        {{ gameObj.awayTeam }}
+        <time>{{ gameObj.date }}</time>)
+    </h1>
+    <div class="tag-list">
+        {% for tag in gameObj | getTags %}
+            <a class="tag big-tag" href="/{{ tag | strToSlug }}">{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {{ content | safe }}
+</article>

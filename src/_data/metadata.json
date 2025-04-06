@@ -1,0 +1,10 @@
+{
+    "title": "Score Charts Only",
+    "url": "https://eleventy-not-so-minimal-blog-starter.netlify.app",
+    "language": "en",
+    "description": "Only score charts. Surely this will never change.",
+    "author": {
+        "name": "An Nguyen",
+        "email": "anknguyenanknguyen@gmail.com"
+    }
+}

@@ -1,0 +1,15 @@
+---
+layout: page
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+permalink: /{{ tag | strToSlug }}/
+---
+
+<h1>{{ title }}</h1>
+{% include "./_includes/components/tagList.njk" %}
+{% set games = collections[ tag ] | reverse %}
+{% include "./_includes/components/gamesList.njk" %}

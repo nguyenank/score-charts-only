@@ -1,0 +1,18 @@
+<nav role="navigation" aria-label="category navigation">
+  <span>Filter games by tag:</span>
+  <ul class="tag-list">
+    <li class="tag {{ ' active' if page.url == '/' }}">
+      <a class="category__link" href="/" {{ "aria-current" if page.url === "/" }}>All</a>
+    </li>
+    {% set tagList = allGames | getAllTags %}
+    {% for tag in tagList %}
+      {% set tagUrl = ["/", (tag | strToSlug) , "/" ] |  join %}
+      <li class="tag {{ ' active' if page.url == tagUrl }}">
+        <a href="{{ tagUrl }}" {{ "aria-current" if page.url == tagUrl }}>
+          {{ tag }}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+  <p>All games sorted from newest to oldest.</p>
+</nav>

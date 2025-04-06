@@ -1,0 +1,14 @@
+---
+    layout : game
+    pagination:
+        data : allGames
+        size : 1
+        alias: gameObj
+        addAllPagesToCollections: true
+    permalink : "/game/{{gameObj.gameId}}/"
+    eleventyComputed :
+        preview : '<p><img src="/assets/viz/{{gameObj.gameId}}.png" alt="viz" eleventy:widths="600"/></p>'
+---
+
+<p><img src="/assets/viz/{{gameObj.gameId}}.png" alt="viz" eleventy:widths="900"/>
+</p>

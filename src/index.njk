@@ -1,0 +1,11 @@
+---
+layout: page
+title: "Games"
+eleventyNavigation:
+    key: Games
+    order: 1
+---
+
+{% include "./_includes/components/tagList.njk" %}
+{% set games = collections.game | reverse %}
+{% include "./_includes/components/gamesList.njk" %}
